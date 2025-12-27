@@ -81,11 +81,12 @@ packs:
   # ============================================================================
   ai:
     name: "AI & Machine Learning"
-    description: "LLM architecture, ML systems, embeddings, causal inference."
+    description: "LLM architecture, ML systems, embeddings, causal inference, art consistency."
     skills:
       - ai/llm-architect
       - ai/ml-memory
       - ai/causal-scientist
+      - ai/art-consistency
       - development/ai-product
 
   # ============================================================================
@@ -137,6 +138,7 @@ packs:
       - marketing/video-production
       - marketing/motion-graphics
       - marketing/prompt-engineering-creative
+      - ai/art-consistency  # Character/style consistency for AI art
 
   # ============================================================================
   # FRAMEWORKS - Framework-specific skills
