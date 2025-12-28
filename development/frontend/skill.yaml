@@ -4,6 +4,16 @@ version: 1.0.0
 layer: 1
 description: World-class frontend engineering - React philosophy, performance, accessibility, and production-grade interfaces
 
+principles:
+  - "User experience is the only metric that matters"
+  - "Performance is a feature, not an optimization"
+  - "Accessibility is not optional"
+  - "The best code is the code you don't ship"
+  - "State is the root of all evil - minimize it"
+  - "Composition over inheritance, always"
+  - "Progressive enhancement over graceful degradation"
+  - "Measure before you optimize"
+
 owns:
   - frontend-architecture
   - component-design
@@ -26,6 +36,49 @@ pairs_with:
   - backend
   - devops
   - qa-engineering
+
+does_not_own:
+  - visual-design → ui-design
+  - user-research → ux-design
+  - api-design → backend
+  - database-architecture → backend
+  - deployment-infrastructure → devops
+  - e2e-testing-strategy → test-architect
+
+stack:
+  frameworks:
+    - react
+    - next.js
+    - vue
+    - nuxt
+    - svelte
+    - sveltekit
+    - solid
+    - astro
+  state-management:
+    - zustand
+    - jotai
+    - redux-toolkit
+    - tanstack-query
+    - swr
+  styling:
+    - tailwind-css
+    - css-modules
+    - styled-components
+    - vanilla-extract
+  build-tools:
+    - vite
+    - turbopack
+    - webpack
+    - esbuild
+  testing:
+    - vitest
+    - jest
+    - testing-library
+    - playwright
+    - cypress
+
+expertise_level: advanced
 
 requires: []
 

@@ -4,6 +4,16 @@ version: 1.0.0
 layer: 1
 description: Authentication and authorization expert for OAuth, sessions, JWT, MFA, and identity security
 
+principles:
+  - "Defense in depth - single security control is never enough"
+  - "Short-lived tokens - access tokens expire fast, refresh tokens rotate"
+  - "Server-side state for security-critical data - don't trust the client"
+  - "Phishing-resistant MFA - TOTP is baseline, passkeys are the future"
+  - "Secrets management - keys rotate, never hardcode, use vault services"
+  - "Most auth bugs aren't crypto failures - they're logic bugs"
+  - "The algorithm is fine; the implementation around it breaks"
+  - "Authentication tells you who; authorization tells you what"
+
 owns:
   - oauth-oidc-flows
   - session-management
@@ -21,6 +31,41 @@ pairs_with:
   - backend-node
   - database-specialist
   - privacy-guardian
+
+does_not_own:
+  - network-security → cybersecurity
+  - infrastructure-hardening → devops
+  - key-management-hsms → cybersecurity
+  - rate-limiting-infrastructure → performance-hunter
+  - pii-handling → privacy-guardian
+  - api-endpoint-design → api-designer
+
+stack:
+  auth-providers:
+    - nextauth
+    - clerk
+    - auth0
+    - supabase-auth
+    - firebase-auth
+    - keycloak
+  protocols:
+    - oauth2.1
+    - oidc
+    - saml
+    - webauthn
+  libraries:
+    - jose
+    - jsonwebtoken
+    - passport
+    - argon2
+    - bcrypt
+  mfa:
+    - totp
+    - webauthn
+    - passkeys
+    - fido2
+
+expertise_level: advanced
 
 requires: []
 
