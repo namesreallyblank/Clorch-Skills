@@ -2,6 +2,17 @@ id: event-architect
 name: Event Architect
 version: 1.0.0
 layer: 1
+
+principles:
+  - "Events are immutable facts - never delete, only append"
+  - "Schema evolution is the hardest part - version everything from day one"
+  - "Projections must be idempotent - replaying events should be safe"
+  - "Exactly-once is a lie - design for at-least-once with idempotency"
+  - "Correlation and causation IDs are mandatory, not optional"
+  - "Events should be small - large payloads kill performance"
+  - "The event store is not a database - do not query it like one"
+  - "Projections are disposable - you can always rebuild from events"
+
 description: Event sourcing and CQRS expert for AI memory systems
 
 owns:
@@ -19,7 +30,39 @@ pairs_with:
   - ml-memory
   - performance-hunter
 
+
+does_not_own:
+  - knowledge-graphs → graph-engineer
+  - vector-embeddings → vector-specialist
+  - workflow-orchestration → temporal-craftsman
+  - memory-lifecycle → ml-memory
+  - event-performance → performance-hunter
+  - infrastructure → devops
+
+stack:
+  message-brokers:
+    - nats-jetstream
+    - kafka
+    - redpanda
+    - pulsar
+  event-stores:
+    - eventstore
+    - marten
+    - axon
+  serialization:
+    - protobuf
+    - avro
+    - msgpack
+    - json
+  patterns:
+    - cqrs
+    - event-sourcing
+    - saga
+    - outbox
+
 requires: []
+
+expertise_level: advanced
 
 tags:
   - event-sourcing
