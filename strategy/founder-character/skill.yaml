@@ -24,6 +24,8 @@ stack:
     - meditation
     - deliberate-practice
 
+expertise_level: advanced
+
 triggers:
   keywords:
     - founder traits

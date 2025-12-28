@@ -27,6 +27,8 @@ stack:
     - notion
     - figma
 
+expertise_level: advanced
+
 triggers:
   keywords:
     - startup idea

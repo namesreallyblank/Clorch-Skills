@@ -26,6 +26,8 @@ stack:
   payments:
     - stripe
 
+expertise_level: advanced
+
 triggers:
   keywords:
     - early stage

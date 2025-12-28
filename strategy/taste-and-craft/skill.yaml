@@ -26,6 +26,8 @@ stack:
     - dieter-rams
     - apple-hig
 
+expertise_level: advanced
+
 triggers:
   keywords:
     - taste

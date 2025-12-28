@@ -25,6 +25,8 @@ stack:
     - weekly-review
     - decision-journal
 
+expertise_level: advanced
+
 triggers:
   keywords:
     - founder productivity

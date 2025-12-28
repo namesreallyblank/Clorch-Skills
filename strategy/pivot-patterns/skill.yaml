@@ -24,6 +24,8 @@ stack:
     - retention
     - engagement
 
+expertise_level: advanced
+
 triggers:
   keywords:
     - pivot
