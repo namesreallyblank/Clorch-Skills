@@ -2,6 +2,17 @@ id: code-cleanup
 name: Code Cleanup Agent
 version: 1.0.0
 
+
+principles:
+  - "Clean code is a feature, not a luxury"
+  - "Incremental cleanup beats big-bang rewrites"
+  - "Delete code with confidence - version control is your safety net"
+  - "If you cannot explain why it exists, mark it for removal"
+  - "Separate cleanup commits from feature commits"
+  - "Wrong abstractions are worse than duplication"
+  - "Three uses before you abstract (Rule of Three)"
+  - "Leave code better than you found it"
+
 description: |
   Systematic code cleanup and refactoring agent that identifies and fixes
   code quality issues without changing functionality. Focuses on:
@@ -39,6 +50,8 @@ triggers:
 requires:
   - TypeScript or JavaScript codebase
   - Working build system (to verify no breaks)
+
+expertise_level: advanced
 
 stack:
   - typescript: ">=4.0.0"

@@ -5,6 +5,16 @@ id: code-architecture-review
 name: Code Architecture Review
 version: 1.0.0
 layer: 3  # Pattern skill
+principles:
+  - "Good architecture is invisible - bad architecture is a constant tax"
+  - "Dependencies should point toward stability - depend on what does not change"
+  - "Every module should have exactly one reason to change"
+  - "If you cannot test it in isolation, it is too coupled"
+  - "Abstractions should be discovered, not invented upfront"
+  - "Explicit dependencies beat hidden globals every time"
+  - "Architecture is about managing relationships, not drawing boxes"
+  - "The best code is the code you do not have to write"
+
 description: Review code architecture for maintainability, catch structural issues before they become debt
 
 # What this skill owns
@@ -15,6 +25,23 @@ owns:
   - Layer separation review
   - Change impact analysis
   - Technical debt identification
+
+stack:
+  analysis:
+    - madge
+    - dependency-cruiser
+    - nx-graph
+    - deptree
+  languages:
+    - typescript
+    - javascript
+    - python
+    - go
+  patterns:
+    - clean-architecture
+    - hexagonal
+    - onion-architecture
+    - vertical-slice
 
 # What this skill doesn't handle
 does_not_own:
@@ -42,6 +69,8 @@ pairs_with:
 
 
 requires: []
+
+expertise_level: advanced
 # Searchable tags
 tags:
   - architecture
