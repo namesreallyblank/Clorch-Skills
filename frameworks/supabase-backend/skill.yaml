@@ -12,24 +12,12 @@ owns:
   - supabase-storage
   - supabase-realtime
 
-stack:
-  platform:
-    - supabase
-  features:
-    - postgrest
-    - realtime
-    - storage
-    - edge-functions
-  auth:
-    - supabase-auth
 pairs_with:
   - nextjs-app-router
   - nextjs-supabase-auth
   - typescript-strict
 
 requires: []
-
-expertise_level: advanced
 
 tags:
   - supabase

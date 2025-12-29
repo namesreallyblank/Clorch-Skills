@@ -16,8 +16,6 @@ description: |
   doesn't feel like marketing. Distribution comes before product features. And
   your first 100 customers should never come from paid ads.
 
-expertise_level: advanced
-
 triggers:
   - marketing strategy
   - positioning
@@ -26,18 +24,6 @@ triggers:
   - growth channels
   - brand
   - go-to-market
-
-stack:
-  analytics:
-    - google-analytics
-    - mixpanel
-    - posthog
-  marketing:
-    - mailchimp
-    - hubspot
-  social:
-    - buffer
-    - hootsuite
 
 principles:
   - name: Positioning First

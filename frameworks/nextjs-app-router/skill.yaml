@@ -13,16 +13,6 @@ owns:
   - next-metadata
   - next-caching
 
-stack:
-  frameworks:
-    - nextjs
-    - react
-  patterns:
-    - app-router
-    - server-components
-    - server-actions
-  deployment:
-    - vercel
 pairs_with:
   - supabase-backend
   - typescript-strict
@@ -30,8 +20,6 @@ pairs_with:
   - react-patterns
 
 requires: []
-
-expertise_level: advanced
 
 tags:
   - nextjs

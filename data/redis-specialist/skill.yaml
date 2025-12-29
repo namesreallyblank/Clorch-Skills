@@ -4,16 +4,6 @@ version: 1.0.0
 layer: 1
 description: Redis expert for caching, pub/sub, data structures, and distributed systems patterns
 
-principles:
-  - "Cache invalidation is the hard problem - not caching itself"
-  - "TTL is not a strategy - it is a safety net for when your strategy fails"
-  - "Data structures matter - using the right one is 10x more important than tuning"
-  - "Memory is finite - know your eviction policy before you need it"
-  - "Pub/sub is fire-and-forget - if you need guarantees, use streams"
-  - "Most Redis performance issues are application issues, not Redis issues"
-  - "Hot keys kill clusters - distribute load or use read replicas"
-  - "Single-threaded means one slow command blocks everything"
-
 owns:
   - redis-caching
   - cache-invalidation
@@ -31,38 +21,6 @@ pairs_with:
   - auth-specialist
   - infra-architect
   - postgres-wizard
-does_not_own:
-  - database-queries → postgres-wizard
-  - websocket-transport → realtime-engineer
-  - event-sourcing → event-architect
-  - session-security → auth-specialist
-  - cluster-infrastructure → infra-architect
-  - application-caching-logic → backend
-
-stack:
-  redis-hosting:
-    - upstash
-    - elasticache
-    - memorystore
-    - redis-cloud
-    - railway
-  clients:
-    - ioredis
-    - redis-py
-    - go-redis
-    - jedis
-  patterns:
-    - redlock
-    - redis-streams
-    - redis-cluster
-    - redis-sentinel
-  tools:
-    - redis-cli
-    - redis-insight
-    - redis-commander
-
-expertise_level: advanced
-
 
 requires: []
 

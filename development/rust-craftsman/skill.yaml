@@ -16,17 +16,6 @@ owns:
   - zero-cost-abstractions
   - rust-ffi
 
-stack:
-  languages:
-    - rust
-  frameworks:
-    - tokio
-    - actix
-    - axum
-  tools:
-    - cargo
-    - clippy
-    - rustfmt
 pairs_with:
   - backend
   - devops
@@ -36,8 +25,6 @@ pairs_with:
   - security-analyst
 
 requires: []
-
-expertise_level: advanced
 
 tags:
   - rust

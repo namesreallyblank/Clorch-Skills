@@ -2,17 +2,6 @@ id: graphql-architect
 name: GraphQL Architect
 version: 1.0.0
 layer: 1
-
-principles:
-  - "Schema is the contract - design it like a product"
-  - "DataLoader is mandatory - N+1 is the default without it"
-  - "Security by default - query depth limits, complexity analysis"
-  - "Federation for microservices, monolith for small teams"
-  - "Subscriptions are expensive - use wisely"
-  - "Your schema is not your database - transform in resolvers"
-  - "Pagination is not optional - unbounded lists are dangerous"
-  - "Thin resolvers, thick services - business logic lives elsewhere"
-
 description: GraphQL API specialist for schema design, resolvers, federation, and performance optimization
 
 owns:
@@ -33,39 +22,7 @@ pairs_with:
   - performance-hunter
   - security-analyst
 
-
-stack:
-  servers:
-    - apollo-server
-    - graphql-yoga
-    - mercurius
-    - strawberry
-  clients:
-    - apollo-client
-    - urql
-    - relay
-    - graphql-request
-  tools:
-    - graphql-codegen
-    - rover
-    - apollo-studio
-    - graphiql
-  patterns:
-    - dataloader
-    - federation
-    - persisted-queries
-
-does_not_own:
-  - rest-api-design -> api-designer
-  - database-modeling -> database-design
-  - frontend-state -> frontend
-  - performance-tuning -> performance-hunter
-  - security-audit -> security-analyst
-  - backend-services -> backend
-
 requires: []
-
-expertise_level: advanced
 
 tags:
   - graphql

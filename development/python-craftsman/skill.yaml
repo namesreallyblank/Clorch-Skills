@@ -14,18 +14,6 @@ owns:
   - pydantic-models
   - testing-patterns
 
-stack:
-  languages:
-    - python
-  frameworks:
-    - fastapi
-    - django
-    - flask
-  tools:
-    - poetry
-    - ruff
-    - mypy
-    - pytest
 pairs_with:
   - api-designer
   - test-architect
@@ -35,8 +23,6 @@ pairs_with:
   - docs-engineer
 
 requires: []
-
-expertise_level: advanced
 
 tags:
   - python

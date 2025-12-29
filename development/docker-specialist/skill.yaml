@@ -2,17 +2,6 @@ id: docker-specialist
 name: Docker Specialist
 version: 1.0.0
 layer: 1
-
-principles:
-  - "Smallest image possible - less to scan, less to transfer, less attack surface"
-  - "Multi-stage builds are non-negotiable for compiled languages"
-  - "Layer caching is the key to fast builds"
-  - "Never run as root - it is not 2015 anymore"
-  - "One process per container, compose for orchestration"
-  - "Pin exact versions - latest is not a version"
-  - "The .dockerignore file is as important as the Dockerfile"
-  - "Dev and prod containers should be identical except for mounts"
-
 description: Container specialist for Docker, Docker Compose, image optimization, and container orchestration fundamentals
 
 owns:
@@ -33,38 +22,7 @@ pairs_with:
   - performance-hunter
   - ci-cd-specialist
 
-
-does_not_own:
-  - kubernetes-orchestration → infra-architect
-  - ci-cd-pipelines → devops
-  - security-scanning → security-analyst
-  - container-performance → performance-hunter
-  - application-code → backend
-  - cloud-infrastructure → infra-architect
-
-stack:
-  runtime:
-    - docker
-    - podman
-    - containerd
-  orchestration:
-    - docker-compose
-    - docker-swarm
-  registries:
-    - docker-hub
-    - ghcr
-    - ecr
-    - gcr
-    - harbor
-  security:
-    - trivy
-    - grype
-    - snyk
-    - dockle
-
 requires: []
-
-expertise_level: advanced
 
 tags:
   - docker

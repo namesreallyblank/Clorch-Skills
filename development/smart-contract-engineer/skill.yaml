@@ -14,19 +14,6 @@ owns:
   - nft-contracts
   - contract-testing
 
-stack:
-  languages:
-    - solidity
-    - vyper
-    - rust
-  frameworks:
-    - hardhat
-    - foundry
-    - anchor
-  chains:
-    - ethereum
-    - polygon
-    - solana
 pairs_with:
   - defi-architect
   - wallet-integration
@@ -36,8 +23,6 @@ pairs_with:
   - frontend
 
 requires: []
-
-expertise_level: advanced
 
 tags:
   - solidity

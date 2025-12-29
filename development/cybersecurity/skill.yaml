@@ -4,16 +4,6 @@ version: 1.0.0
 layer: 1
 description: Security engineering that protects applications, data, and users from real-world threats
 
-principles:
-  - "Defense in depth - never rely on a single control"
-  - "Fail secure - when in doubt, deny access"
-  - "Least privilege - only grant what's necessary"
-  - "Trust nothing from outside your security boundary"
-  - "Security is a process, not a product"
-  - "Assume breach - design for detection and containment"
-  - "Simple security > complex security nobody understands"
-  - "Never shame developers - teach them to build securely"
-
 owns:
   - application-security
   - authentication
@@ -34,42 +24,6 @@ pairs_with:
   - devops
   - code-review
   - qa-engineering
-
-does_not_own:
-  - infrastructure-hardening → devops
-  - application-logic → backend
-  - frontend-implementation → frontend
-  - oauth-flows → auth-specialist
-  - network-architecture → devops
-  - compliance-frameworks → privacy-guardian
-
-stack:
-  scanning:
-    - snyk
-    - dependabot
-    - trivy
-    - gitleaks
-    - semgrep
-    - opengrep
-  waf:
-    - cloudflare
-    - aws-waf
-    - modsecurity
-  secrets:
-    - vault
-    - aws-secrets-manager
-    - google-secret-manager
-    - doppler
-  identity:
-    - okta
-    - auth0
-    - azure-ad
-  monitoring:
-    - siem
-    - splunk
-    - elastic-security
-
-expertise_level: advanced
 
 requires: []
 

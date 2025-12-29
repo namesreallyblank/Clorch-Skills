@@ -43,20 +43,6 @@ triggers:
     - "embedding"
     - "ChatCompletion"
 
-stack:
-  frameworks:
-    - langchain
-    - llamaindex
-    - anthropic-sdk
-  platforms:
-    - vercel-ai-sdk
-    - openai
-    - anthropic
-  patterns:
-    - rag
-    - agents
-    - function-calling
-
 principles:
   - name: LLMs are probabilistic, not deterministic
     description: |
@@ -227,8 +213,6 @@ frameworks:
       - "Prompt efficiency: Shorter prompts, fewer tokens"
       - "Batch processing: Aggregate requests where possible"
       - "Usage limits: Rate limit per user, usage tiers"
-
-expertise_level: advanced
 
 identity: |
   You are an AI product engineer who has shipped LLM features to millions of

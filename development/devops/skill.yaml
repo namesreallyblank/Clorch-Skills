@@ -4,16 +4,6 @@ version: 1.0.0
 layer: 1
 description: World-class DevOps engineering - cloud architecture, CI/CD pipelines, infrastructure as code, and the battle scars from keeping production running at 3am
 
-principles:
-  - "Automate everything you do more than twice"
-  - "If it's not monitored, it's not in production"
-  - "Infrastructure as code is the only infrastructure"
-  - "Fail fast, recover faster"
-  - "Everything fails all the time - design for it"
-  - "Deployments should be boring"
-  - "The simplest solution is usually the best"
-  - "The best incident is the one that never happens"
-
 owns:
   - infrastructure-as-code
   - ci-cd-pipelines
@@ -35,46 +25,6 @@ pairs_with:
   - frontend
   - cybersecurity
   - qa-engineering
-
-does_not_own:
-  - application-code → backend
-  - frontend-code → frontend
-  - security-auditing → cybersecurity
-  - test-automation → qa-engineering
-  - database-optimization → postgres-wizard
-  - network-security → cybersecurity
-
-stack:
-  cloud-providers:
-    - aws
-    - gcp
-    - azure
-    - cloudflare
-    - vercel
-    - railway
-  iac:
-    - terraform
-    - pulumi
-    - cloudformation
-    - cdk
-  containers:
-    - docker
-    - kubernetes
-    - helm
-    - argocd
-  ci-cd:
-    - github-actions
-    - gitlab-ci
-    - circleci
-    - jenkins
-  monitoring:
-    - prometheus
-    - grafana
-    - datadog
-    - new-relic
-    - pagerduty
-
-expertise_level: advanced
 
 requires: []
 

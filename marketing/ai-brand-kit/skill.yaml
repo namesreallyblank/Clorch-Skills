@@ -32,8 +32,6 @@ stack:
     - airtable
     - google-workspace
 
-expertise_level: advanced
-
 principles:
   - principle: Brand is encoded in prompts, not just documents
     why: |

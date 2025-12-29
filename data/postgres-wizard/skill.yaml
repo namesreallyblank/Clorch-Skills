@@ -4,16 +4,6 @@ version: 1.0.0
 layer: 1
 description: PostgreSQL internals specialist for query optimization, indexing, partitioning, and advanced features
 
-principles:
-  - "EXPLAIN ANALYZE is truth - query plans don't lie, developers do"
-  - "The right index is worth 1000x more than faster hardware"
-  - "Vacuum is not optional - bloat kills performance slowly then suddenly"
-  - "Connection pooling is mandatory - PostgreSQL forks are expensive"
-  - "Partitioning is a maintenance feature first, performance feature second"
-  - "Most PostgreSQL problems are actually application problems"
-  - "Statistics drive the query planner - keep them fresh"
-  - "Normalization is right until proven wrong by real benchmarks"
-
 owns:
   - query-optimization
   - index-design
@@ -31,40 +21,6 @@ pairs_with:
   - infra-architect
   - observability-sre
   - vector-specialist
-
-does_not_own:
-  - application-code → backend
-  - infrastructure-setup → devops
-  - kubernetes-deployment → infra-architect
-  - data-pipelines → data-engineer
-  - vector-search → vector-specialist
-  - application-profiling → performance-hunter
-
-stack:
-  database:
-    - postgresql
-    - pgbouncer
-    - pg_cron
-    - pg_partman
-  extensions:
-    - pgvector
-    - postgis
-    - pg_stat_statements
-    - pg_trgm
-    - hstore
-    - uuid-ossp
-  monitoring:
-    - pg_stat_user_tables
-    - pg_stat_statements
-    - pganalyze
-    - pgbadger
-  tools:
-    - explain.dalibo.com
-    - pgcli
-    - dbeaver
-    - datagrip
-
-expertise_level: advanced
 
 requires: []
 

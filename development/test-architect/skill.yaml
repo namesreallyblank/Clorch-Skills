@@ -4,16 +4,6 @@ version: 1.0.0
 layer: 1
 description: Testing strategy specialist for test pyramid design, test isolation, property-based testing, and quality gates
 
-principles:
-  - "The test pyramid is real - unit tests are cheap, e2e tests are expensive"
-  - "Flaky tests are worse than no tests - they teach developers to ignore failures"
-  - "Test behavior, not implementation"
-  - "Fast tests get run, slow tests get skipped"
-  - "Property testing finds bugs you never imagined"
-  - "Coverage measures lines executed, not correctness"
-  - "Test difficulty should match implementation complexity"
-  - "Zero tolerance for flaky tests"
-
 owns:
   - test-strategy
   - test-pyramid
@@ -31,45 +21,6 @@ pairs_with:
   - observability-sre
   - migration-specialist
   - chaos-engineer
-
-does_not_own:
-  - implementation-code → backend
-  - infrastructure-setup → devops
-  - load-testing → performance-hunter
-  - production-monitoring → observability-sre
-  - failure-injection → chaos-engineer
-  - code-quality-review → code-reviewer
-
-stack:
-  unit-testing:
-    - pytest
-    - jest
-    - vitest
-    - mocha
-    - go-test
-  integration-testing:
-    - testcontainers
-    - docker-compose
-    - localstack
-  e2e-testing:
-    - playwright
-    - cypress
-    - selenium
-    - puppeteer
-  property-testing:
-    - hypothesis
-    - fast-check
-    - quickcheck
-  contract-testing:
-    - pact
-    - spring-cloud-contract
-  mocking:
-    - pytest-mock
-    - jest-mock
-    - testdouble
-    - wiremock
-
-expertise_level: advanced
 
 requires: []
 

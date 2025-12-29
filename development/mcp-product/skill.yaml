@@ -5,17 +5,6 @@ id: mcp-product
 name: MCP Product Design
 version: 1.0.0
 layer: 3  # Pattern skill
-
-principles:
-  - "If Claude needs docs to use your tool, your tool design is wrong"
-  - "Quick wins create sticky users - value in under 60 seconds"
-  - "Error messages are UX, not debugging - tell users what to do"
-  - "Complexity is opt-in, simplicity is the default"
-  - "Explain what you are doing as you do it - teach while you work"
-  - "Name tools by user goals, not database operations"
-  - "Vibe coders learn through usage - every interaction teaches"
-  - "Make the first experience magical, make the hundredth efficient"
-
 description: Build MCP tools that are sticky for vibe coders and powerful for developers
 
 # What this skill owns
@@ -26,19 +15,6 @@ owns:
   - Onboarding and first-run experience
   - Progressive complexity patterns
   - Tool output formatting
-
-stack:
-  protocols:
-    - mcp
-    - json-rpc
-    - sse
-  frameworks:
-    - cloudflare-workers
-    - typescript
-  ux-patterns:
-    - progressive-disclosure
-    - sensible-defaults
-    - explain-as-you-go
 
 # What this skill doesn't handle
 does_not_own:
@@ -65,8 +41,6 @@ pairs_with:
 
 
 requires: []
-
-expertise_level: advanced
 # Searchable tags
 tags:
   - mcp

@@ -14,18 +14,6 @@ owns:
   - drizzle-kit
   - drizzle-queries
 
-stack:
-  orm:
-    - drizzle-orm
-    - drizzle-kit
-  databases:
-    - postgresql
-    - mysql
-    - sqlite
-    - neon
-    - planetscale
-  languages:
-    - typescript
 pairs_with:
   - hono-patterns
   - sveltekit-fullstack
@@ -35,8 +23,6 @@ pairs_with:
   - fastapi-patterns
 
 requires: []
-
-expertise_level: advanced
 
 tags:
   - orm

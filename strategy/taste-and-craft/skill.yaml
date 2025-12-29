@@ -15,19 +15,6 @@ description: |
   This skill synthesizes PG's wisdom on quality, simplicity, and the details
   that separate great from good.
 
-stack:
-  design:
-    - figma
-    - linear
-  inspiration:
-    - dribbble
-    - awwwards
-  principles:
-    - dieter-rams
-    - apple-hig
-
-expertise_level: advanced
-
 triggers:
   keywords:
     - taste

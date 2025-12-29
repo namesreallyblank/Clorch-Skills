@@ -15,8 +15,6 @@ description: |
   This skill covers onboarding that activates, health scoring that predicts,
   retention plays that save, and expansion strategies that grow accounts.
 
-expertise_level: advanced
-
 triggers:
   keywords:
     - customer success
@@ -38,19 +36,6 @@ triggers:
     - Reducing churn
     - Improving onboarding
     - Building customer health dashboards
-
-stack:
-  tools:
-    - intercom
-    - zendesk
-    - hubspot
-  analytics:
-    - mixpanel
-    - amplitude
-  metrics:
-    - nps
-    - csat
-    - churn-rate
 
 principles:
   - name: Time to value is everything

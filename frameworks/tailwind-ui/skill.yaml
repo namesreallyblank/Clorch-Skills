@@ -11,23 +11,11 @@ owns:
   - responsive-design
   - dark-mode
 
-stack:
-  css:
-    - tailwindcss
-  ui-libraries:
-    - headless-ui
-    - radix-ui
-    - shadcn-ui
-  tools:
-    - tailwind-merge
-    - clsx
 pairs_with:
   - nextjs-app-router
   - react-patterns
 
 requires: []
-
-expertise_level: advanced
 
 tags:
   - tailwind

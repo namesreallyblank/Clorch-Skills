@@ -2,17 +2,6 @@ id: game-development
 name: Game Development
 version: 1.0.0
 layer: 1
-
-principles:
-  - "Fun is the first feature - technical excellence serves player experience"
-  - "Prototype the core loop before building systems"
-  - "Frame rate is a feature - performance is non-negotiable"
-  - "Juice makes the difference between good and memorable"
-  - "Playtest early, playtest often, playtest with fresh eyes"
-  - "Every system exists to serve the player experience"
-  - "Scope kills games - ship smaller, ship sooner"
-  - "Delta time is mandatory - frame-rate independence matters"
-
 description: Building interactive experiences that engage, challenge, and delight players
 
 owns:
@@ -33,42 +22,7 @@ pairs_with:
   - qa-engineering
   - codebase-optimization
 
-
-stack:
-  engines:
-    - phaser
-    - unity
-    - unreal
-    - godot
-    - pixi-js
-  languages:
-    - javascript
-    - typescript
-    - csharp
-    - cpp
-    - gdscript
-  physics:
-    - arcade-physics
-    - matter-js
-    - box2d
-    - rapier
-  tools:
-    - tiled
-    - aseprite
-    - blender
-    - texture-packer
-
-does_not_own:
-  - art-assets -> art-consistency
-  - web-frontend -> frontend
-  - server-infrastructure -> backend
-  - testing-strategy -> qa-engineering
-  - code-performance -> codebase-optimization
-  - audio-design -> audio-engineer
-
 requires: []
-
-expertise_level: advanced
 
 tags:
   - games

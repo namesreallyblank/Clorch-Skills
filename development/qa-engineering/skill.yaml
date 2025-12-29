@@ -18,18 +18,6 @@ owns:
   - test-infrastructure
   - bug-reporting
 
-stack:
-  testing:
-    - jest
-    - pytest
-    - playwright
-    - cypress
-  ci:
-    - github-actions
-    - jenkins
-  tools:
-    - allure
-    - sonarqube
 pairs_with:
   - frontend
   - backend
@@ -37,8 +25,6 @@ pairs_with:
   - cybersecurity
 
 requires: []
-
-expertise_level: advanced
 
 tags:
   - testing

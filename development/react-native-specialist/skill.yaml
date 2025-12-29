@@ -14,18 +14,6 @@ owns:
   - app-store-deployment
   - mobile-testing
 
-stack:
-  frameworks:
-    - react-native
-    - expo
-  navigation:
-    - react-navigation
-  state:
-    - zustand
-    - redux-toolkit
-  tools:
-    - eas-cli
-    - flipper
 pairs_with:
   - frontend
   - ios-swift-specialist
@@ -35,8 +23,6 @@ pairs_with:
   - performance-hunter
 
 requires: []
-
-expertise_level: advanced
 
 tags:
   - react-native

@@ -14,18 +14,6 @@ owns:
   - connection-management
   - reconnection-strategies
 
-stack:
-  protocols:
-    - websocket
-    - webrtc
-    - sse
-  frameworks:
-    - socket.io
-    - pusher
-    - ably
-  databases:
-    - redis
-    - supabase-realtime
 pairs_with:
   - event-architect
   - redis-specialist
@@ -35,8 +23,6 @@ pairs_with:
   - infra-architect
 
 requires: []
-
-expertise_level: advanced
 
 tags:
   - websocket

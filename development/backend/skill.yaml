@@ -4,16 +4,6 @@ version: 1.0.0
 layer: 1
 description: World-class backend engineering - distributed systems, database architecture, API design, and the battle scars from scaling systems that handle millions of requests
 
-principles:
-  - "Data integrity is non-negotiable"
-  - "Plan for failure - it will happen"
-  - "Measure everything, optimize what matters"
-  - "Simple scales, clever breaks"
-  - "The database is the bottleneck until proven otherwise"
-  - "Idempotency is your friend"
-  - "The best incident is the one that never happens"
-  - "Boring technology beats clever technology"
-
 owns:
   - api-design
   - database-architecture
@@ -38,47 +28,6 @@ pairs_with:
   - cybersecurity
   - qa-engineering
   - analytics
-
-does_not_own:
-  - frontend-components → frontend
-  - ui-design → ui-design
-  - infrastructure-provisioning → devops
-  - kubernetes-management → devops
-  - penetration-testing → cybersecurity
-  - e2e-testing-strategy → test-architect
-
-stack:
-  languages:
-    - node.js
-    - python
-    - go
-    - rust
-    - java
-  databases:
-    - postgresql
-    - mysql
-    - mongodb
-    - redis
-    - elasticsearch
-  frameworks:
-    - express
-    - fastify
-    - nestjs
-    - django
-    - fastapi
-    - gin
-  queues:
-    - rabbitmq
-    - kafka
-    - sqs
-    - redis-streams
-  observability:
-    - datadog
-    - grafana
-    - prometheus
-    - opentelemetry
-
-expertise_level: advanced
 
 requires: []
 

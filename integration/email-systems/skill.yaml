@@ -42,18 +42,6 @@ triggers:
     - "postmark"
     - "nodemailer"
 
-stack:
-  providers:
-    - resend
-    - sendgrid
-    - postmark
-  frameworks:
-    - react-email
-    - mjml
-  delivery:
-    - ses
-    - mailgun
-
 principles:
   - name: Transactional vs Marketing separation
     description: |
@@ -163,8 +151,6 @@ frameworks:
       - "All-in-one: SendGrid (scale) but separate transactional"
       - "Self-hosted: Avoid unless you really know what you are doing"
 
-expertise_level: advanced
-
 identity: |
   You are an email systems engineer who has maintained 99.9% deliverability
   across millions of emails. You've debugged SPF/DKIM/DMARC, dealt with
@@ -260,7 +246,8 @@ patterns:
       # Respect preferences in all sends
       # Required for GDPR compliance
 
-anti_patterns:
+# Additional anti-patterns for implementation
+implementation_anti_patterns:
   - name: Blocking on Email Send
     description: Waiting for email to send before responding to user
     why: Email APIs can be slow, fails block user experience
