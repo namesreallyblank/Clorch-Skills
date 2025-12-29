@@ -1,22 +1,46 @@
 # Spawner Skills Registry
 # Defines skill packs and their contents
 
-version: "1.0.0"
-updated: "2025-12-27"
+version: "2.0.0"
+updated: "2025-12-30"
 
-# Categories in this repo
+# Categories in this repo (24 total)
 categories:
+  # Core Development
   - development
-  - data
-  - ai
-  - design
   - frameworks
+  - data
+  - integration
+  - integrations
+
+  # AI & ML
+  - ai
+  - ai-ml
+  - agents
+
+  # Design & Product
+  - design
+  - product
   - marketing
+
+  # Business & Strategy
   - startup
   - strategy
   - communications
-  - integration
-  - product
+
+  # Specialized Domains
+  - biotech
+  - climate
+  - enterprise
+  - finance
+  - hardware
+  - legal
+  - science
+  - simulation
+  - space
+
+  # Meta Skills
+  - mind
 
 # Skill Packs
 # Each pack is a curated collection of skills for specific use cases
@@ -180,11 +204,191 @@ packs:
       - development/performance-hunter
 
   # ============================================================================
+  # AGENTS - AI agent building and orchestration
+  # ============================================================================
+  agents:
+    name: "AI Agents"
+    description: "Build, orchestrate, and evaluate AI agents."
+    skills:
+      - agents/agent-evaluation
+      - agents/agent-memory-systems
+      - agents/agent-tool-builder
+      - agents/browser-automation
+      - agents/computer-use-agents
+      - agents/multi-agent-orchestration
+      - agents/voice-agents
+      - agents/workflow-automation
+      - agents/mcp-builder
+      - agents/rag-specialist
+
+  # ============================================================================
+  # AI-ML - Advanced machine learning
+  # ============================================================================
+  ai-ml:
+    name: "Advanced AI & ML"
+    description: "Deep learning, transformers, MLOps, and specialized ML."
+    skills:
+      - ai-ml/transformer-architecture
+      - ai-ml/reinforcement-learning
+      - ai-ml/distributed-training
+      - ai-ml/model-optimization
+      - ai-ml/mlops
+      - ai-ml/computer-vision
+      - ai-ml/nlp-advanced
+      - ai-ml/recommendation-systems
+      - ai-ml/time-series-forecasting
+      - ai-ml/anomaly-detection
+      - ai-ml/feature-engineering
+      - ai-ml/automl
+
+  # ============================================================================
+  # BIOTECH - Life sciences and healthcare
+  # ============================================================================
+  biotech:
+    name: "Biotech & Life Sciences"
+    description: "Genomics, drug discovery, clinical trials, bioinformatics."
+    skills:
+      - biotech/genomics-pipelines
+      - biotech/drug-discovery-informatics
+      - biotech/protein-structure
+      - biotech/clinical-trials-data
+      - biotech/bioinformatics
+      - biotech/medical-imaging
+
+  # ============================================================================
+  # CLIMATE - Sustainability and environment
+  # ============================================================================
+  climate:
+    name: "Climate & Sustainability"
+    description: "Carbon accounting, climate modeling, renewable energy."
+    skills:
+      - climate/carbon-accounting
+      - climate/climate-modeling
+      - climate/renewable-energy
+      - climate/sustainability-reporting
+      - climate/environmental-monitoring
+
+  # ============================================================================
+  # ENTERPRISE - Large-scale business systems
+  # ============================================================================
+  enterprise:
+    name: "Enterprise Systems"
+    description: "SAP, Salesforce, enterprise integrations, compliance."
+    skills:
+      - enterprise/sap-integration
+      - enterprise/salesforce-development
+      - enterprise/enterprise-architecture
+      - enterprise/compliance-automation
+      - enterprise/erp-systems
+      - enterprise/business-intelligence
+
+  # ============================================================================
+  # FINANCE - Financial technology and trading
+  # ============================================================================
+  finance:
+    name: "Finance & Trading"
+    description: "Algorithmic trading, risk management, blockchain, fintech."
+    skills:
+      - finance/algorithmic-trading
+      - finance/risk-management
+      - finance/blockchain-development
+      - finance/payment-systems
+      - finance/quantitative-analysis
+      - finance/regulatory-compliance
+
+  # ============================================================================
+  # HARDWARE - IoT, embedded, robotics
+  # ============================================================================
+  hardware:
+    name: "Hardware & IoT"
+    description: "Embedded systems, robotics, FPGA, sensor fusion."
+    skills:
+      - hardware/embedded-systems
+      - hardware/ros2-robotics
+      - hardware/fpga-design
+      - hardware/sensor-fusion
+      - hardware/iot-platforms
+      - hardware/pcb-design
+
+  # ============================================================================
+  # INTEGRATIONS - Third-party services
+  # ============================================================================
+  integrations:
+    name: "Integrations"
+    description: "Stripe, Twilio, AWS, and other service integrations."
+    skills:
+      - integrations/stripe-payments
+      - integrations/twilio-communications
+      - integrations/aws-serverless
+      - integrations/azure-functions
+      - integrations/gcp-cloud-run
+      - integrations/algolia-search
+      - integrations/sendgrid-email
+      - integrations/segment-analytics
+      - integrations/auth0-identity
+      - integrations/cloudflare-workers
+      - integrations/vercel-deployment
+      - integrations/github-actions
+      - integrations/slack-bots
+      - integrations/shopify-apps
+
+  # ============================================================================
+  # LEGAL - Legal tech and compliance
+  # ============================================================================
+  legal:
+    name: "Legal Tech"
+    description: "Contract analysis, GDPR, patent drafting, legal automation."
+    skills:
+      - legal/contract-analysis
+      - legal/gdpr-privacy
+      - legal/patent-drafting
+      - legal/legal-research
+      - legal/compliance-frameworks
+
+  # ============================================================================
+  # SCIENCE - Scientific computing
+  # ============================================================================
+  science:
+    name: "Scientific Computing"
+    description: "Numerical methods, simulations, data analysis."
+    skills:
+      - science/numerical-methods
+      - science/scientific-visualization
+      - science/statistical-analysis
+      - science/experiment-design
+
+  # ============================================================================
+  # SIMULATION - Physics, games, digital twins
+  # ============================================================================
+  simulation:
+    name: "Simulation"
+    description: "Physics engines, game dev, digital twins, agent-based modeling."
+    skills:
+      - simulation/physics-simulation
+      - simulation/game-development
+      - simulation/digital-twins
+      - simulation/agent-based-modeling
+      - simulation/discrete-event
+
+  # ============================================================================
+  # SPACE - Aerospace and orbital mechanics
+  # ============================================================================
+  space:
+    name: "Space & Aerospace"
+    description: "Orbital mechanics, spacecraft systems, mission planning."
+    skills:
+      - space/orbital-mechanics
+      - space/spacecraft-systems
+      - space/mission-planning
+      - space/ground-station-ops
+      - space/satellite-communications
+
+  # ============================================================================
   # COMPLETE - Everything
   # ============================================================================
   complete:
     name: "Complete Collection"
-    description: "All 100+ skills. For power users."
+    description: "All 270+ skills. For power users."
     includes_all: true
 
 # Install paths (cross-platform)
