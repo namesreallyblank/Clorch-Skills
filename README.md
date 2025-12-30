@@ -1,35 +1,60 @@
 # Spawner Skills
 
-**273+ skills** for Claude Code. Zero cost, works offline.
+**305+ skills** for Claude. Zero cost, works offline. Full MCP integration.
 
 ## Quick Start
 
 ```bash
-# One-command install (runs directly from GitHub)
-npx github:vibeforge1111/vibeship-spawner-skills install
-
-# Update to latest
-npx github:vibeforge1111/vibeship-spawner-skills update
+# Full setup: Skills + MCP server (recommended)
+npx github:vibeforge1111/vibeship-spawner-skills install --mcp
 ```
 
-### Alternative: Manual Clone
+This one command:
+- Installs 305+ skills to `~/.spawner/skills/`
+- Configures the Spawner MCP server for Claude Desktop & Claude Code
+- Enables project memory, code validation, sharp edge detection
+
+### Other Commands
 
 ```bash
-# Clone to your home directory
-git clone https://github.com/vibeforge1111/vibeship-spawner-skills ~/.spawner/skills
+# Just install skills (no MCP)
+npx github:vibeforge1111/vibeship-spawner-skills install
 
-# Update skills
-cd ~/.spawner/skills && git pull
+# Add MCP to existing installation
+npx github:vibeforge1111/vibeship-spawner-skills setup-mcp
+
+# Update skills to latest
+npx github:vibeforge1111/vibeship-spawner-skills update
+
+# Check status
+npx github:vibeforge1111/vibeship-spawner-skills status
 ```
 
-### CLI Commands
+### Manual Clone (Alternative)
 
-| Command | Description |
-|---------|-------------|
-| `npx github:vibeforge1111/vibeship-spawner-skills install` | Install skills to ~/.spawner/skills |
-| `npx github:vibeforge1111/vibeship-spawner-skills update` | Update to latest version |
-| `npx github:vibeforge1111/vibeship-spawner-skills status` | Check installation status |
-| `npx github:vibeforge1111/vibeship-spawner-skills list` | List installed categories |
+```bash
+git clone https://github.com/vibeforge1111/vibeship-spawner-skills ~/.spawner/skills
+```
+
+## What You Get
+
+### Local Skills (305+)
+Claude reads YAML files directly from `~/.spawner/skills/`:
+- Patterns, anti-patterns, best practices
+- Sharp edges (gotchas) for each technology
+- Works offline, zero API cost
+
+### MCP Server Tools
+When you use `--mcp`, these tools become available:
+
+| Tool | What It Does |
+|------|--------------|
+| `spawner_orchestrate` | Auto-routes your request to the right workflow |
+| `spawner_validate` | Runs guardrail checks on your code |
+| `spawner_remember` | Saves decisions for future sessions |
+| `spawner_watch_out` | Surfaces relevant sharp edges |
+| `spawner_unstick` | Helps when you're going in circles |
+| `spawner_skills` | Searches and loads skills by context |
 
 ## After Installation
 
