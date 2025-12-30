@@ -1,6 +1,6 @@
 # vibeship-spawner-skills
 
-CLI installer for VibeShip Spawner skills - 273+ specialist skills for AI-powered product building.
+CLI installer for VibeShip Spawner skills - 260+ specialist skills for AI-powered product building.
 
 ## Quick Install
 
@@ -49,13 +49,14 @@ Read: ~/.spawner/skills/development/backend/sharp-edges.yaml
 
 ## Skill Categories
 
-- **development** (57 skills) - Backend, frontend, API, auth, testing
+- **development** (62 skills) - Backend, frontend, API, auth, testing
 - **marketing** (33 skills) - Content, SEO, social, email
+- **integrations** (16 skills) - AWS, Stripe, Discord, Slack, Twilio
 - **ai** (12 skills) - LLM, ML, embeddings, RAG
 - **agents** (10 skills) - Autonomous agents, multi-agent systems
-- **data** (8 skills) - PostgreSQL, Redis, data pipelines
+- **data** (10 skills) - PostgreSQL, Redis, data pipelines
 - **mind** (10 skills) - Memory systems, context management
-- And many more...
+- And 17 more categories...
 
 ## Documentation
 
