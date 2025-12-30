@@ -1,0 +1,11 @@
+{
+  "name": "spawner-skills-scripts",
+  "version": "1.0.0",
+  "description": "Validation and utility scripts for spawner-skills",
+  "scripts": {
+    "validate": "node validate-skills.js"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}
