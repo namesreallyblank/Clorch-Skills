@@ -5,11 +5,11 @@
 ## Quick Start
 
 ```bash
-# One-command install
-npx vibeship-spawner-skills install
+# One-command install (runs directly from GitHub)
+npx github:vibeforge1111/vibeship-spawner-skills install
 
 # Update to latest
-npx vibeship-spawner-skills update
+npx github:vibeforge1111/vibeship-spawner-skills update
 ```
 
 ### Alternative: Manual Clone
@@ -26,10 +26,10 @@ cd ~/.spawner/skills && git pull
 
 | Command | Description |
 |---------|-------------|
-| `npx vibeship-spawner-skills install` | Install skills to ~/.spawner/skills |
-| `npx vibeship-spawner-skills update` | Update to latest version |
-| `npx vibeship-spawner-skills status` | Check installation status |
-| `npx vibeship-spawner-skills list` | List installed categories |
+| `npx github:vibeforge1111/vibeship-spawner-skills install` | Install skills to ~/.spawner/skills |
+| `npx github:vibeforge1111/vibeship-spawner-skills update` | Update to latest version |
+| `npx github:vibeforge1111/vibeship-spawner-skills status` | Check installation status |
+| `npx github:vibeforge1111/vibeship-spawner-skills list` | List installed categories |
 
 ## After Installation
 
@@ -41,7 +41,7 @@ cd ~/.spawner/skills && git pull
 
 ## How It Works
 
-1. You install skills locally with `npx vibeship-spawner-skills install`
+1. You install skills locally with `npx github:vibeforge1111/vibeship-spawner-skills install`
 2. Tell Claude to read a skill: `Read: ~/.spawner/skills/development/backend/skill.yaml`
 3. Claude now has specialist knowledge - ask it to build something!
 

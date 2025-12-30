@@ -287,7 +287,7 @@ Claude should display:
 
 List all skills:
 ```bash
-npx vibeship-spawner-skills list
+npx github:vibeforge1111/vibeship-spawner-skills list
 ```
 
 Or ask Claude:
@@ -309,7 +309,7 @@ List your active skills and give me one specific insight from each
 New skills are added regularly:
 
 ```bash
-npx vibeship-spawner-skills update
+npx github:vibeforge1111/vibeship-spawner-skills update
 ```
 
 ```
@@ -338,10 +338,10 @@ npx vibeship-spawner-skills update
 │  SPAWNER SKILLS - QUICK REFERENCE                               │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
-│  INSTALL         npx vibeship-spawner-skills install            │
-│  UPDATE          npx vibeship-spawner-skills update             │
-│  LIST            npx vibeship-spawner-skills list               │
-│  STATUS          npx vibeship-spawner-skills status             │
+│  INSTALL         npx github:vibeforge1111/vibeship-spawner-skills install  │
+│  UPDATE          npx github:vibeforge1111/vibeship-spawner-skills update   │
+│  LIST            npx github:vibeforge1111/vibeship-spawner-skills list     │
+│  STATUS          npx github:vibeforge1111/vibeship-spawner-skills status   │
 │                                                                 │
 │  SPAWN A SKILL   "Read: ~/.spawner/skills/[cat]/[skill]/*.yaml" │
 │  CHECK ACTIVE    "Show me which skills are currently active"    │
