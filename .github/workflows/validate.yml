@@ -1,0 +1,54 @@
+name: Validate Skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Validate All Skills
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install validation dependencies
+        working-directory: scripts
+        run: npm install
+
+      - name: Run skill validation
+        working-directory: scripts
+        run: npm run validate
+
+  count:
+    name: Skill Count
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Count skills
+        run: |
+          echo "## Skill Count" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          total=0
+          for category in */; do
+            if [[ "$category" != "scripts/" && "$category" != "cli/" && "$category" != ".git/" && "$category" != ".github/" ]]; then
+              count=$(find "$category" -mindepth 1 -maxdepth 1 -type d | wc -l)
+              if [ "$count" -gt 0 ]; then
+                echo "- **${category%/}**: $count skills" >> $GITHUB_STEP_SUMMARY
+                total=$((total + count))
+              fi
+            fi
+          done
+
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Total: $total skills**" >> $GITHUB_STEP_SUMMARY
