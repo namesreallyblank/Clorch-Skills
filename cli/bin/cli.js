@@ -76,19 +76,19 @@ function countSkills() {
 
 function printBanner() {
   console.log(`
-${COLORS.magenta}╔═══════════════════════════════════════════════════════════╗
-║                                                             ║
-║   ${COLORS.bright}SPAWNER SKILLS${COLORS.reset}${COLORS.magenta}                                          ║
-║   ${COLORS.cyan}245 Specialist Skills for AI-Powered Product Building${COLORS.reset}${COLORS.magenta}    ║
-║                                                             ║
-╚═══════════════════════════════════════════════════════════╝${COLORS.reset}
+${COLORS.magenta}┌─────────────────────────────────────────────────────────┐${COLORS.reset}
+${COLORS.magenta}│${COLORS.reset}                                                         ${COLORS.magenta}│${COLORS.reset}
+${COLORS.magenta}│${COLORS.reset}   ${COLORS.bright}VIBESHIP SPAWNER SKILLS${COLORS.reset}                              ${COLORS.magenta}│${COLORS.reset}
+${COLORS.magenta}│${COLORS.reset}   ${COLORS.cyan}Specialist Skills for AI-Powered Product Building${COLORS.reset}     ${COLORS.magenta}│${COLORS.reset}
+${COLORS.magenta}│${COLORS.reset}                                                         ${COLORS.magenta}│${COLORS.reset}
+${COLORS.magenta}└─────────────────────────────────────────────────────────┘${COLORS.reset}
 `);
 }
 
 function printUsage() {
   console.log(`
 ${COLORS.bright}Usage:${COLORS.reset}
-  npx spawner-skills <command>
+  npx vibeship-spawner-skills <command>
 
 ${COLORS.bright}Commands:${COLORS.reset}
   install     Install skills to ~/.spawner/skills
@@ -98,9 +98,9 @@ ${COLORS.bright}Commands:${COLORS.reset}
   help        Show this help message
 
 ${COLORS.bright}Examples:${COLORS.reset}
-  npx spawner-skills install     # First-time installation
-  npx spawner-skills update      # Pull latest skills
-  npx spawner-skills status      # Check if installed
+  npx vibeship-spawner-skills install     # First-time installation
+  npx vibeship-spawner-skills update      # Pull latest skills
+  npx vibeship-spawner-skills status      # Check if installed
 
 ${COLORS.bright}After Installation:${COLORS.reset}
   Skills are available at: ~/.spawner/skills/
@@ -130,7 +130,7 @@ async function install() {
 
   if (skillsExist()) {
     logInfo('Skills already installed at ' + SKILLS_DIR);
-    logInfo('Run "npx spawner-skills update" to get the latest version');
+    logInfo('Run "npx vibeship-spawner-skills update" to get the latest version');
     const count = countSkills();
     logSuccess(`${count} skills available`);
     return;
@@ -164,15 +164,20 @@ ${COLORS.bright}Quick Start:${COLORS.reset}
   ${COLORS.cyan}Read: ~/.spawner/skills/development/backend/skill.yaml
   Read: ~/.spawner/skills/development/backend/sharp-edges.yaml${COLORS.reset}
 
+  Then ask Claude to build something - it now has specialist knowledge!
+
 ${COLORS.bright}Popular Skills:${COLORS.reset}
-  development/backend     - Backend/API development
-  development/frontend    - Frontend/UI development
-  data/postgres-wizard    - PostgreSQL expert
-  ai/llm-architect        - LLM integration
+  development/backend      - Backend/API development
+  development/frontend     - Frontend/UI development
+  data/postgres-wizard     - PostgreSQL expert
+  ai/llm-architect         - LLM integration
   agents/autonomous-agents - AI agents
 
+${COLORS.bright}Full Guide:${COLORS.reset}
+  ${SKILLS_DIR}/GETTING_STARTED.md
+
 ${COLORS.bright}Update Skills:${COLORS.reset}
-  npx spawner-skills update
+  npx vibeship-spawner-skills update
 `);
   } catch (error) {
     logError('Failed to clone repository');
@@ -185,7 +190,7 @@ async function update() {
   logStep('1/2', 'Checking installation...');
 
   if (!skillsExist()) {
-    logError('Skills not installed. Run "npx spawner-skills install" first.');
+    logError('Skills not installed. Run "npx vibeship-spawner-skills install" first.');
     process.exit(1);
   }
 
@@ -234,14 +239,14 @@ function status() {
     } catch {}
   } else {
     logError('Not installed');
-    logInfo('Run: npx spawner-skills install');
+    logInfo('Run: npx vibeship-spawner-skills install');
   }
   console.log('');
 }
 
 function list() {
   if (!skillsExist()) {
-    logError('Skills not installed. Run "npx spawner-skills install" first.');
+    logError('Skills not installed. Run "npx vibeship-spawner-skills install" first.');
     process.exit(1);
   }
 

@@ -1,6 +1,6 @@
 # Spawner Skills
 
-**245 skills** for Claude Code. Zero cost, works offline.
+**270+ skills** for Claude Code. Zero cost, works offline.
 
 ## Quick Start
 
@@ -31,11 +31,19 @@ cd ~/.spawner/skills && git pull
 | `npx vibeship-spawner-skills status` | Check installation status |
 | `npx vibeship-spawner-skills list` | List installed categories |
 
+## After Installation
+
+**[Read the Getting Started Guide](GETTING_STARTED.md)** for:
+- How to load skills in Claude
+- Common workflows (SaaS, AI agents, marketing)
+- Best practices
+- Using skill packs
+
 ## How It Works
 
-1. You chat with Claude using Spawner
-2. Claude reads skills directly from `~/.spawner/skills/`
-3. No API calls for skill loading = free, fast, offline
+1. You install skills locally with `npx vibeship-spawner-skills install`
+2. Tell Claude to read a skill: `Read: ~/.spawner/skills/development/backend/skill.yaml`
+3. Claude now has specialist knowledge - ask it to build something!
 
 ## Skill Categories (24)
 
