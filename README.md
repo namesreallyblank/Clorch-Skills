@@ -1,6 +1,6 @@
 # Spawner Skills
 
-**305+ skills** for Claude. Zero cost, works offline. Full MCP integration.
+**260+ skills** for Claude. Zero cost, works offline. Full MCP integration.
 
 ## Quick Start
 
@@ -10,7 +10,7 @@ npx github:vibeforge1111/vibeship-spawner-skills install --mcp
 ```
 
 This one command:
-- Installs 305+ skills to `~/.spawner/skills/`
+- Installs 260+ skills to `~/.spawner/skills/`
 - Configures the Spawner MCP server for Claude Desktop & Claude Code
 - Enables project memory, code validation, sharp edge detection
 
@@ -38,7 +38,7 @@ git clone https://github.com/vibeforge1111/vibeship-spawner-skills ~/.spawner/sk
 
 ## What You Get
 
-### Local Skills (305+)
+### Local Skills (260+)
 Claude reads YAML files directly from `~/.spawner/skills/`:
 - Patterns, anti-patterns, best practices
 - Sharp edges (gotchas) for each technology
@@ -109,7 +109,7 @@ When you use `--mcp`, these tools become available:
 | `finance` | Trading and fintech |
 | `mind` | Debugging and decision-making |
 | `specialized` | Biotech, space, climate, hardware |
-| `complete` | All 273 skills |
+| `complete` | All 262 skills |
 
 ## Directory Structure
 
