@@ -2,10 +2,10 @@
 # Defines skill packs and their contents
 
 version: "2.0.0"
-updated: "2025-12-30"
-total_skills: 245
+updated: "2025-12-31"
+total_skills: 265
 
-# Categories in this repo (24 total)
+# Categories in this repo (26 total)
 categories:
   # Core (139 skills)
   - development      # 57 skills
@@ -34,6 +34,10 @@ categories:
   - integration      # 4 skills
   - design           # 4 skills
   - startup          # 3 skills
+
+  # Creative & Fun (20 skills)
+  - vibe-lab         # 10 skills - Creative chaos and viral content
+  - survival-kit     # 10 skills - Developer survival utilities
 
 # Skill Packs
 # Each pack is a curated collection of skills for specific use cases
@@ -281,11 +285,47 @@ packs:
       - mind/technical-writer
 
   # ============================================================================
+  # VIBE-LAB - Creative chaos and viral content
+  # ============================================================================
+  vibe-lab:
+    name: "Vibe Lab"
+    description: "Creative chaos, memes, viral hooks, and unconventional marketing."
+    skills:
+      - vibe-lab/meme-engineering
+      - vibe-lab/easter-egg-design
+      - vibe-lab/gamification-loops
+      - vibe-lab/viral-hooks
+      - vibe-lab/absurdist-voice
+      - vibe-lab/lore-building
+      - vibe-lab/cliffhanger-craft
+      - vibe-lab/roast-writing
+      - vibe-lab/anti-marketing
+      - vibe-lab/cultural-remix
+
+  # ============================================================================
+  # SURVIVAL-KIT - Developer survival utilities
+  # ============================================================================
+  survival-kit:
+    name: "Developer Survival Kit"
+    description: "Essential skills for navigating real-world developer challenges."
+    skills:
+      - survival-kit/side-project-shipping
+      - survival-kit/tech-debt-negotiation
+      - survival-kit/documentation-that-slaps
+      - survival-kit/code-review-diplomacy
+      - survival-kit/legacy-archaeology
+      - survival-kit/scope-creep-defense
+      - survival-kit/demo-day-theater
+      - survival-kit/incident-postmortem
+      - survival-kit/regex-whisperer
+      - survival-kit/git-time-travel
+
+  # ============================================================================
   # COMPLETE - Everything
   # ============================================================================
   complete:
     name: "Complete Collection"
-    description: "All 245 skills. For power users."
+    description: "All 265 skills. For power users."
     includes_all: true
 
 # Install paths (cross-platform)
