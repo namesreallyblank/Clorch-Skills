@@ -1,6 +1,33 @@
 # Spawner Skills
 
-**462 skills** for Claude. Zero cost, works offline. Full MCP integration.
+> **[spawner.vibeship.co](https://spawner.vibeship.co)** | **[Browse All Skills](https://spawner.vibeship.co/skills)**
+
+**462 production-grade skills** for Claude. Zero cost, works offline. Full MCP integration.
+
+## Why Spawner Skills?
+
+Most "AI prompts" are just text files. Spawner Skills are **production-grade knowledge systems** with 4 specialized files per skill:
+
+```
+maker/micro-saas-launcher/
+├── skill.yaml           # Identity, patterns, anti-patterns, handoffs
+├── sharp-edges.yaml     # Gotchas with detection patterns
+├── validations.yaml     # Automated code quality checks
+└── collaboration.yaml   # How skills work together
+```
+
+### What Makes Our Skills Different
+
+| Feature | Regular Prompts | Spawner Skills |
+|---------|-----------------|----------------|
+| **Patterns** | Generic advice | Battle-tested implementation code |
+| **Anti-patterns** | None | "Don't do this because..." with alternatives |
+| **Sharp Edges** | None | Gotchas with automatic detection |
+| **Validations** | None | Regex patterns that catch mistakes |
+| **Collaboration** | None | Skills delegate to each other |
+| **Severity Levels** | None | Critical, high, medium, low |
+
+---
 
 ## Quick Start
 
@@ -36,6 +63,144 @@ npx github:vibeforge1111/vibeship-spawner-skills status
 git clone https://github.com/vibeforge1111/vibeship-spawner-skills ~/.spawner/skills
 ```
 
+---
+
+## The 4-File Skill System
+
+### 1. `skill.yaml` - Identity & Patterns
+
+Defines who the skill is and how it works:
+
+```yaml
+id: micro-saas-launcher
+name: Micro-SaaS Launcher
+identity:
+  role: SaaS Launch Architect
+  personality: |
+    You've launched 12 micro-SaaS products. You know the difference
+    between "building" and "shipping." You push for MVP ruthlessly.
+
+patterns:
+  - name: 2-Week MVP
+    when_to_use: Starting any new SaaS
+    implementation: |
+      Week 1: Core feature + auth + payments
+      Week 2: Landing page + launch
+
+anti_patterns:
+  - name: Feature Creep Before Launch
+    why_bad: You'll never ship. Users don't want features, they want solutions.
+    what_to_do_instead: Launch with ONE core feature. Add more based on feedback.
+
+handoffs:
+  - trigger: "landing page|sales page"
+    to: landing-page-design
+    context: "SaaS landing page needed"
+```
+
+### 2. `sharp-edges.yaml` - Gotchas & Warnings
+
+Things that bite you in production:
+
+```yaml
+sharp_edges:
+  - id: no-distribution-plan
+    summary: Building without knowing how to reach customers
+    severity: critical
+    situation: You're building but have no idea where customers will come from
+    why: |
+      Distribution is harder than building.
+      "If you build it, they will come" is a lie.
+      Most failed startups had good products, bad distribution.
+    solution: |
+      ## Before Writing Code, Answer:
+
+      | Question | Your Answer |
+      |----------|-------------|
+      | Where do your customers hang out? | _________ |
+      | Can you reach 100 of them this week? | _________ |
+      | What's your unfair distribution advantage? | _________ |
+
+      If you can't answer these, STOP BUILDING.
+    symptoms:
+      - "I'll figure out marketing later"
+      - "The product will sell itself"
+      - Building for 3+ months with no users
+    detection_pattern: "marketing later|users will come|viral"
+```
+
+### 3. `validations.yaml` - Automated Code Checks
+
+Catch mistakes before they ship:
+
+```yaml
+validations:
+  - id: no-payment-integration
+    name: No Payment Integration
+    severity: critical
+    type: conceptual
+    check: "SaaS should have payment integration"
+    indicators:
+      - "No Stripe/payment code"
+      - "Free tier only"
+      - "Payment coming soon"
+    message: "No payment integration - you're building a hobby, not a business."
+    fix_action: "Add Stripe checkout before launch. No exceptions."
+
+  - id: api-key-exposed
+    name: API Key in Frontend Code
+    severity: critical
+    type: regex
+    pattern: '(sk_live_|sk_test_)[a-zA-Z0-9]{20,}'
+    file_patterns:
+      - "*.js"
+      - "*.ts"
+      - "*.tsx"
+    message: "Stripe secret key exposed in frontend code!"
+    fix_action: "Move to environment variables on backend"
+```
+
+### 4. `collaboration.yaml` - Skill Teamwork
+
+How skills work together:
+
+```yaml
+receives_from:
+  - skill: landing-page-design
+    context: "SaaS landing page"
+    receives:
+      - "Conversion-optimized design"
+      - "Hero section structure"
+    provides: "Complete SaaS product launch"
+
+delegation_triggers:
+  - trigger: "landing page|sales page"
+    delegate_to: landing-page-design
+    pattern: sequential
+    context: "Need landing page for SaaS"
+
+  - trigger: "SEO|organic traffic"
+    delegate_to: seo
+    pattern: parallel
+    context: "SEO for SaaS content"
+
+common_combinations:
+  - name: Full SaaS Launch
+    skills:
+      - micro-saas-launcher
+      - landing-page-design
+      - stripe
+      - seo
+    workflow: |
+      1. Validate idea (micro-saas-launcher)
+      2. Build MVP with payments (micro-saas-launcher + stripe)
+      3. Create landing page (landing-page-design)
+      4. Launch and iterate
+      5. Add SEO for organic growth (seo)
+```
+
+---
+
 ## What You Get
 
 ### Local Skills (462)
@@ -56,19 +221,7 @@ When you use `--mcp`, these tools become available:
 | `spawner_unstick` | Helps when you're going in circles |
 | `spawner_skills` | Searches and loads skills by context |
 
-## After Installation
-
-**[Read the Getting Started Guide](GETTING_STARTED.md)** for:
-- How to load skills in Claude
-- Common workflows (SaaS, AI agents, marketing)
-- Best practices
-- Using skill packs
-
-## How It Works
-
-1. You install skills locally with `npx github:vibeforge1111/vibeship-spawner-skills install`
-2. Tell Claude to read a skill: `Read: ~/.spawner/skills/backend/backend/skill.yaml`
-3. Claude now has specialist knowledge - ask it to build something!
+---
 
 ## Skill Categories (35)
 
@@ -110,6 +263,10 @@ When you use `--mcp`, these tools become available:
 | science | 4 | Experimental design, statistics |
 | startup | 3 | YC playbook, founder mode |
 
+**[Browse all 462 skills](https://spawner.vibeship.co/skills)**
+
+---
+
 ## Skill Packs
 
 | Pack | Description |
@@ -125,63 +282,23 @@ When you use `--mcp`, these tools become available:
 | `specialized` | Biotech, space, climate, hardware |
 | `complete` | All 462 skills |
 
-## Directory Structure
+---
 
-```
-~/.spawner/skills/
-├── registry.yaml          # Pack definitions
-├── ai/                    # 24 skills
-├── ai-agents/             # 23 skills
-├── ai-tools/              # 12 skills
-├── backend/               # 21 skills
-├── biotech/               # 6 skills
-├── blockchain/            # 20 skills
-├── climate/               # 5 skills
-├── communications/        # 5 skills
-├── community/             # 11 skills
-├── creative/              # 23 skills
-├── data/                  # 11 skills
-├── design/                # 12 skills
-├── development/           # 9 skills
-├── devops/                # 22 skills
-├── education/             # 7 skills
-├── enterprise/            # 6 skills
-├── finance/               # 6 skills
-├── frameworks/            # 12 skills
-├── frontend/              # 8 skills
-├── game-dev/              # 51 skills
-├── hardware/              # 6 skills
-├── integrations/          # 25 skills
-├── legal/                 # 5 skills
-├── maker/                 # 11 skills
-├── marketing/             # 36 skills
-├── mind/                  # 10 skills
-├── product/               # 7 skills
-├── science/               # 4 skills
-├── security/              # 13 skills
-├── simulation/            # 5 skills
-├── space/                 # 5 skills
-├── startup/               # 3 skills
-├── strategy/              # 24 skills
-├── testing/               # 8 skills
-└── trading/               # 6 skills
-```
+## Documentation
 
-## Skill Format
+- **[Skills Directory](SKILLS_DIRECTORY.md)** - Complete list of all 462 skills
+- **[Getting Started Guide](GETTING_STARTED.md)** - How to use skills effectively
+- **[Contributing](CONTRIBUTING.md)** - How to add or improve skills
 
-Each skill has 4 YAML files:
+---
 
-```
-backend/
-├── skill.yaml           # Identity, patterns, anti-patterns
-├── sharp-edges.yaml     # Gotchas and warnings
-├── validations.yaml     # Code checks
-└── collaboration.yaml   # Handoffs and prerequisites
-```
+## How It Works
 
-## Contributing
+1. Install skills with `npx github:vibeforge1111/vibeship-spawner-skills install`
+2. Tell Claude to read a skill: `Read: ~/.spawner/skills/maker/micro-saas-launcher/skill.yaml`
+3. Claude now has specialist knowledge - ask it to build something!
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add or improve skills.
+---
 
 ## License
 
