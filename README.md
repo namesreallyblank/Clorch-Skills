@@ -1,6 +1,6 @@
 # Spawner Skills
 
-**260+ skills** for Claude. Zero cost, works offline. Full MCP integration.
+**462 skills** for Claude. Zero cost, works offline. Full MCP integration.
 
 ## Quick Start
 
@@ -10,7 +10,7 @@ npx github:vibeforge1111/vibeship-spawner-skills install --mcp
 ```
 
 This one command:
-- Installs 260+ skills to `~/.spawner/skills/`
+- Installs 462 skills to `~/.spawner/skills/`
 - Configures the Spawner MCP server for Claude Desktop & Claude Code
 - Enables project memory, code validation, sharp edge detection
 
@@ -38,7 +38,7 @@ git clone https://github.com/vibeforge1111/vibeship-spawner-skills ~/.spawner/sk
 
 ## What You Get
 
-### Local Skills (260+)
+### Local Skills (462)
 Claude reads YAML files directly from `~/.spawner/skills/`:
 - Patterns, anti-patterns, best practices
 - Sharp edges (gotchas) for each technology
@@ -67,36 +67,47 @@ When you use `--mcp`, these tools become available:
 ## How It Works
 
 1. You install skills locally with `npx github:vibeforge1111/vibeship-spawner-skills install`
-2. Tell Claude to read a skill: `Read: ~/.spawner/skills/development/backend/skill.yaml`
+2. Tell Claude to read a skill: `Read: ~/.spawner/skills/backend/backend/skill.yaml`
 3. Claude now has specialist knowledge - ask it to build something!
 
-## Skill Categories (24)
+## Skill Categories (35)
 
 | Category | Count | Description |
 |----------|-------|-------------|
-| development | 57 | Backend, frontend, devops, security, testing |
-| marketing | 33 | AI video, copywriting, SEO, content |
-| strategy | 15 | Product strategy, growth, founder skills |
-| integrations | 14 | AWS, GCP, Stripe, Discord, Slack, Twilio |
-| ai-ml | 12 | Code generation, image editing, safety |
-| ai | 12 | LLM architect, fine-tuning, NLP |
-| agents | 10 | Autonomous agents, browser automation |
+| game-dev | 51 | Unity, Godot, Phaser, multiplayer, game design |
+| marketing | 36 | AI video, copywriting, SEO, content, viral |
+| integrations | 25 | AWS, GCP, Stripe, Discord, Slack, Twilio |
+| ai | 24 | LLM architect, embeddings, fine-tuning, NLP |
+| strategy | 24 | Product strategy, growth, competitive intel |
+| ai-agents | 23 | Autonomous agents, browser automation, voice |
+| creative | 23 | Memes, easter eggs, gamification, viral hooks |
+| devops | 22 | CI/CD, Docker, K8s, observability, SRE |
+| backend | 21 | APIs, microservices, queues, caching |
+| blockchain | 20 | Smart contracts, DeFi, NFTs, Solana |
+| security | 13 | Auth, OWASP, compliance, privacy |
+| ai-tools | 12 | Code generation, image editing, multimodal |
+| design | 12 | UI, UX, branding, landing pages |
+| frameworks | 12 | Next.js, React, Svelte, Supabase, Tailwind |
+| community | 11 | Discord, Telegram, DevRel, ambassador programs |
+| data | 11 | Postgres, Redis, vectors, graphs, temporal |
+| maker | 11 | Viral tools, bots, extensions, SaaS, templates |
 | mind | 10 | Debugging, decision-making, system design |
-| data | 8 | Postgres, Redis, vectors, graphs |
-| hardware | 6 | Embedded, FPGA, robotics, sensors |
-| frameworks | 6 | Next.js, React, Svelte, Supabase |
-| finance | 6 | Algo trading, DeFi, derivatives |
-| enterprise | 6 | Compliance, governance, architecture |
+| development | 9 | General development utilities |
+| frontend | 8 | React, mobile, state management |
+| testing | 8 | QA, test architecture, code review |
+| education | 7 | Course creation, AI tutoring, learning design |
+| product | 7 | A/B testing, analytics, PM |
 | biotech | 6 | Genomics, drug discovery, lab automation |
-| space | 5 | Orbital mechanics, mission planning |
-| simulation | 5 | Monte Carlo, digital twin, physics |
-| legal | 5 | Contracts, GDPR, patents, SOX |
-| communications | 5 | Dev comms, crisis, stakeholder |
+| enterprise | 6 | Compliance, governance, architecture |
+| finance | 6 | Algo trading, DeFi, derivatives |
+| hardware | 6 | Embedded, FPGA, robotics, sensors |
+| trading | 6 | Execution algorithms, quant research |
 | climate | 5 | Carbon, energy, sustainability |
+| communications | 5 | Dev comms, crisis, stakeholder |
+| legal | 5 | Contracts, GDPR, patents, SOX |
+| simulation | 5 | Monte Carlo, digital twin, physics |
+| space | 5 | Orbital mechanics, mission planning |
 | science | 4 | Experimental design, statistics |
-| product | 4 | A/B testing, analytics, PM |
-| integration | 4 | Auth, email, Stripe, Vercel |
-| design | 4 | UI, UX, branding, landing pages |
 | startup | 3 | YC playbook, founder mode |
 
 ## Skill Packs
@@ -105,41 +116,55 @@ When you use `--mcp`, these tools become available:
 |------|-------------|
 | `essentials` | Core skills for building apps (auto-installed) |
 | `agents` | Autonomous agents and automation |
+| `community` | Community building and management |
+| `education` | Course creation and online learning |
+| `maker` | Viral tools, bots, extensions, SaaS |
 | `enterprise` | Compliance and governance |
 | `finance` | Trading and fintech |
 | `mind` | Debugging and decision-making |
 | `specialized` | Biotech, space, climate, hardware |
-| `complete` | All 262 skills |
+| `complete` | All 462 skills |
 
 ## Directory Structure
 
 ```
 ~/.spawner/skills/
 ├── registry.yaml          # Pack definitions
-├── development/           # 57 skills
-├── marketing/             # 33 skills
-├── strategy/              # 15 skills
-├── integrations/          # 14 skills (AWS, Stripe, etc.)
-├── ai-ml/                 # 12 skills
-├── ai/                    # 12 skills
-├── agents/                # 10 skills
-├── mind/                  # 10 skills
-├── data/                  # 8 skills
-├── hardware/              # 6 skills
-├── frameworks/            # 6 skills
-├── finance/               # 6 skills
-├── enterprise/            # 6 skills
+├── ai/                    # 24 skills
+├── ai-agents/             # 23 skills
+├── ai-tools/              # 12 skills
+├── backend/               # 21 skills
 ├── biotech/               # 6 skills
-├── space/                 # 5 skills
-├── simulation/            # 5 skills
-├── legal/                 # 5 skills
-├── communications/        # 5 skills
+├── blockchain/            # 20 skills
 ├── climate/               # 5 skills
+├── communications/        # 5 skills
+├── community/             # 11 skills
+├── creative/              # 23 skills
+├── data/                  # 11 skills
+├── design/                # 12 skills
+├── development/           # 9 skills
+├── devops/                # 22 skills
+├── education/             # 7 skills
+├── enterprise/            # 6 skills
+├── finance/               # 6 skills
+├── frameworks/            # 12 skills
+├── frontend/              # 8 skills
+├── game-dev/              # 51 skills
+├── hardware/              # 6 skills
+├── integrations/          # 25 skills
+├── legal/                 # 5 skills
+├── maker/                 # 11 skills
+├── marketing/             # 36 skills
+├── mind/                  # 10 skills
+├── product/               # 7 skills
 ├── science/               # 4 skills
-├── product/               # 4 skills
-├── integration/           # 4 skills
-├── design/                # 4 skills
-└── startup/               # 3 skills
+├── security/              # 13 skills
+├── simulation/            # 5 skills
+├── space/                 # 5 skills
+├── startup/               # 3 skills
+├── strategy/              # 24 skills
+├── testing/               # 8 skills
+└── trading/               # 6 skills
 ```
 
 ## Skill Format
