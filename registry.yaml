@@ -3,9 +3,9 @@
 
 version: "3.0.0"
 updated: "2025-12-31"
-total_skills: 432
+total_skills: 439
 
-# Categories in this repo (32 total)
+# Categories in this repo (33 total)
 categories:
   # Core Development (145 skills)
   - backend          # 21 skills - Backend, APIs, infrastructure
@@ -33,6 +33,9 @@ categories:
 
   # Community (11 skills)
   - community        # 11 skills - Community building, platforms, DevRel
+
+  # Education (7 skills)
+  - education        # 7 skills - Online courses, learning design, AI tutoring
 
   # Design & Creative (35 skills)
   - design           # 12 skills - UI/UX, branding
@@ -195,6 +198,21 @@ packs:
       - community/ambassador-programs
       - community/web3-community
       - community/community-tooling
+
+  # ============================================================================
+  # EDUCATION - Online education and course creation
+  # ============================================================================
+  education:
+    name: "Education & Online Learning"
+    description: "Course creation, live education, learning experience, and AI tutoring."
+    skills:
+      - education/course-creation
+      - education/live-education
+      - education/education-business
+      - education/learning-experience
+      - education/education-platforms
+      - education/ai-for-learning
+      - education/student-success
 
   # ============================================================================
   # FRAMEWORKS - Framework-specific skills
@@ -402,7 +420,7 @@ packs:
   # ============================================================================
   complete:
     name: "Complete Collection"
-    description: "All 421 skills. For power users."
+    description: "All 439 skills. For power users."
     includes_all: true
 
 # Install paths (cross-platform)
